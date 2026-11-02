@@ -1,0 +1,38 @@
+
+# api call for admin register create account
+###
+POST http://127.0.0.1:8000/accounts/admin/
+Content-Type: application/json
+
+{
+    "username":"admin_01",
+    "email":"admin@gmail.com",
+    "password":"admin@123",
+    "phone":"9767875544"
+}
+
+# api call for user register create account
+###
+POST http://127.0.0.1:8000/accounts/user/
+Content-Type: application/json
+
+{
+    "username":"user_01",
+    "email":"user@gmail.com",
+    "password":"user@123",
+    "phone":"876394855"
+}
+
+
+# api call for jwt access create
+###
+POST http://127.0.0.1:8000/accounts/user/token/
+Content-Type: application/json
+
+{
+    "username":"user_01",
+    "password":"user@123"
+}
+
+#"refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5MzcyNDQ5NywiaWF0IjoxNzkzNjM4MDk3LCJqdGkiOiI4MzgwZmJiNzJiNzI0YjYzOTYzNGIzZWMyMzY1N2I4YyIsInVzZXJfaWQiOiIyIn0.KA7-F2s9K41OxLF4YopANrmrw1MM-wkRZxlZcODnR1Q"
+#"access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzNjM4Mzk3LCJpYXQiOjE3OTM2MzgwOTcsImp0aSI6ImVjMzc0ZjYxZDFjMTQ2NWNhZGJkMTI3ZjBhODM3OGI1IiwidXNlcl9pZCI6IjIifQ.62EorzLt_HMBPwtyLodVCvuz8270xcGVqbUQCCpThac"

@@ -43,6 +43,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "rest_framework",
+    # "rest_framework.authtoken"
+     "rest_framework_simplejwt",
+    "accounts",
+    "leads",
+   
 ]
 
 MIDDLEWARE = [
@@ -75,15 +81,28 @@ TEMPLATES = [
 WSGI_APPLICATION = 'lead_mgt.wsgi.application'
 
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'lead_mgt_db',        # The name of your database
+        'USER': 'root',                # Your MySQL username
+        'PASSWORD': 'Password@123',    # Your MySQL password
+        'HOST': 'localhost',            # Use '127.0.0.1' or the server's IP address
+        'PORT': '3306',                 # Default MySQL port
+        
+    }
+}
+
+
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
@@ -126,3 +145,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AUTH_USER_MODEL ="accounts.user"
